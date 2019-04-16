@@ -9,6 +9,10 @@ import time
 def getinfo():
     id_ = dr.find_element_by_xpath('//*/div[@class="article-sub"]/span[1]')
     time_ = dr.find_element_by_xpath('//*/div[@class="article-sub"]/span[2]')
+    title_ = dr.find_element_by_xpath('/html/body/div/div[2]/div[2]/div[1]/h1')
+    text_ = dr.find_element_by_xpath('/html/body/div/div[2]/div[2]/div[1]/div[2]')
+    item = [id_.text,time_.text,title_.text,text_.text]
+    return item
 
 # 打开浏览器和百度风云榜
 dr = webdriver.Chrome()
@@ -53,3 +57,4 @@ dr.switch_to.window(all_handles[-1])
 
 # 获取信息
 info = getinfo()
+print(info)
