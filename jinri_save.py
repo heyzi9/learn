@@ -4,10 +4,11 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver import phantomjs
 
 # 数据写入CSV函数
 def write(item):
-    with open(r"F:\git\python\learn\jr.csv","a")as f:
+    with open(r"F:\git\python\learn\jr2.csv","a")as f:
         writer = csv.writer(f)
         try:
             writer.writerow(item)
@@ -26,6 +27,7 @@ def getinfo():
 #打开浏览器，设置隐式等待，打开页面
 url = "https://www.toutiao.com/search/?keyword=selenium"
 dr = webdriver.Chrome()
+# dr = webdriver.PhantomJS()
 dr.implicitly_wait(2)
 dr.get(url)
 
@@ -40,7 +42,7 @@ for i in range(2000):
 
 # 再次留下时间加载，因不确定最后刷新到哪，因此不用显示等待
 time.sleep(1)
-url_ = dr.find_element_by_css_selector('.title')
+url_ = dr.find_elements_by_css_selector('.title')
 print(url_)
 
 #链接列表
