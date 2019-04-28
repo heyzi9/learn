@@ -23,8 +23,9 @@ login('yjm','12345678')
 time.sleep(2)
 key1 = dr.find_element_by_xpath('//*[@id="app"]/div/div[2]/div/div/div[1]/div[1]/div[1]/div[1]/strong').text
 print(key1)
-dr.find_element_by_xpath('//*[@id="app"]/div/div[1]/div[3]/div/i').click()
-dr.find_element_by_xpath('//*[@id="dropdown-menu-8153"]/li[3]').click()
+dr.find_element_by_xpath('//*[@id="app"]/div/div[1]/div[3]/div/span').click()
+# dr.find_element_by_xpath('//*[@id="dropdown-menu-8153"]/li[3]').click()
+# dr.find_element_by_link_text(u'退出登录').click()
 # dr.close()
 
 #等待3秒
