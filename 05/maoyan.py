@@ -17,7 +17,7 @@ for i in numbers_list:
 dr = webdriver.Chrome()
 
 # 打开csv文件
-csv_file = open("writer.csv","w+",newline="encoding=utf-8-sig")
+csv_file = open("writer.csv","w+",newline='',encoding='utf-8-sig')
 writer = csv.writer(csv_file)
 
 # 访问一级页面
