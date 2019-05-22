@@ -26,8 +26,8 @@ for i in url_list:
     time.sleep(1)
     print("正在链接为%s的页面"%i)
 
-    #循环嵌套，对每个页面中的链接再次进行获取操作
-    for j in range(1,10):
+    #循环嵌套，对每个页面中的链接再次进行获取操作 range(1,11)表示从1-10
+    for j in range(1,11):
         #从一级页面获取信息
         #获取演员
         xpath2 = '//*[@id="app"]/div/div/div[1]/dl/dd[%d]/div/div/div[1]/p[2]'%j

@@ -9,3 +9,5 @@
 # else:
 #     x = 5*x + 3
 #     print("f(x)=" + str(x))
+for i in range(1,11):
+    print(i)
